@@ -7,8 +7,6 @@ const options = {
 
 const pgp = require('pg-promise')(options);
 
-
-// const connectionString = 'pginstance.ctwfwbqhfx8u.us-west-1.rds.amazonaws.com:5432' || 'postgres://localhost:5432/training';
 const db = pgp({
   user: 'aws',
   database: 'myAWS',
