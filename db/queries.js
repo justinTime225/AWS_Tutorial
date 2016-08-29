@@ -10,10 +10,10 @@ const pgp = require('pg-promise')(options);
 
 // const connectionString = 'pginstance.ctwfwbqhfx8u.us-west-1.rds.amazonaws.com:5432' || 'postgres://localhost:5432/training';
 const db = pgp({
-  user: 'testground',
-  database: 'mytest123',
-  password: 'blank',
-  host: 'playgroundtest.ctwfwbqhfx8u.us-west-1.rds.amazonaws.com',
+  user: 'aws',
+  database: 'myAWS',
+  password: 'mytutorial123',
+  host: 'awstutorial.ctwfwbqhfx8u.us-west-1.rds.amazonaws.com',
   port: 5432,
 });
 
