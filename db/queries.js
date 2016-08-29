@@ -19,7 +19,6 @@ const db = pgp({
 
 // query functions
 function getChestExercises(req, res, next) {
-  console.log('in chest function');
   const query = "select name, concat(set_min, '-', set_max) as SetRange, \
   concat(light_rep_min, '-', light_rep_max) as LightRepRange, \
   concat(heavy_rep_min, '-', heavy_rep_max) as HeavyRepRange, \
@@ -27,11 +26,9 @@ function getChestExercises(req, res, next) {
   from chest";
   db.any(query)
     .then(function resolve(data) {
-      console.log(data, '------');
       res.status(200).send(data);
     })
     .catch(function error(err) {
-      console.log('looks like an error');
       return next(err);
     });
 }
